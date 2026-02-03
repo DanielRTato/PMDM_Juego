@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb; 
     
-    public float speed = 0; // Velocidad del jugador 
+    [SerializeField] float speed = 0; // Velocidad del jugador 
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
     
