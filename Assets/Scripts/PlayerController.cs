@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     InputAction jumpAction;
 
+    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent <Rigidbody>();
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
         }
     }
  
+    // FixedUpdate is called at a fixed interval and is independent of frame rate. Put physics code here.
     private void FixedUpdate() 
     {
         Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
@@ -72,14 +74,13 @@ public class PlayerController : MonoBehaviour
         
     }
     
-    void OnTriggerEnter(Collider other) 
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("PickUp")) 
+        if (other.gameObject.CompareTag("PickUp") && other.gameObject.activeSelf)
         {
             other.gameObject.SetActive(false);
-            count = count + 1;
+            count++;
             SetCountText();
-
         }
     }
     
