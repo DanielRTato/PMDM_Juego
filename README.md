@@ -1,7 +1,7 @@
 # Roll-a-Ball 
 
 
-![Captura de pantalla](img/Captura%20de%20pantalla%202026-02-05%20221436.png)
+![Captura de pantalla](Captura%20de%20pantalla%202026-02-05%20221436.png)
 
 ---
 
